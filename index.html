@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>공정무역 소비 유형 테스트</title>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
+
+<title>
+공정무역 소비 유형 테스트
+</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="
+https://fonts.googleapis.com/css2?
+family=Pretendard:wght@400;500;600;700&
+display=swap"
+rel="stylesheet">
 
 <style>
 
@@ -15,15 +32,17 @@ box-sizing:border-box;
 }
 
 body{
+
 font-family:
-"Segoe UI",
+"Pretendard",
 sans-serif;
 
 background:
+
 linear-gradient(
 135deg,
-#edf7ff,
-#f4fff3
+#edf7ff 0%,
+#f6fff3 100%
 );
 
 min-height:100vh;
@@ -31,22 +50,28 @@ min-height:100vh;
 padding:20px;
 
 color:#1f2937;
+
 }
 
 .container{
 
-max-width:850px;
+max-width:820px;
 
 margin:auto;
 
-background:white;
+background:
+rgba(255,255,255,.92);
 
-padding:40px;
+backdrop-filter:
+blur(14px);
 
-border-radius:35px;
+padding:42px;
+
+border-radius:34px;
 
 box-shadow:
-0 20px 50px rgba(0,0,0,.08);
+0 14px 40px
+rgba(0,0,0,.08);
 
 }
 
@@ -56,15 +81,22 @@ width:max-content;
 
 margin:auto;
 
-padding:12px 18px;
-
-background:#f3f4f6;
+padding:
+10px 18px;
 
 border-radius:999px;
 
+background:white;
+
+font-size:14px;
+
 font-weight:700;
 
-margin-bottom:25px;
+margin-bottom:26px;
+
+box-shadow:
+0 4px 12px
+rgba(0,0,0,.05);
 
 }
 
@@ -74,7 +106,7 @@ text-align:center;
 
 font-size:2.5rem;
 
-margin-bottom:10px;
+margin-bottom:12px;
 
 }
 
@@ -82,11 +114,11 @@ margin-bottom:10px;
 
 text-align:center;
 
-color:#6b7280;
-
 line-height:1.8;
 
-margin-bottom:35px;
+color:#6b7280;
+
+margin-bottom:36px;
 
 }
 
@@ -100,7 +132,7 @@ border-radius:999px;
 
 overflow:hidden;
 
-margin-bottom:35px;
+margin-bottom:38px;
 
 }
 
@@ -110,20 +142,21 @@ height:100%;
 
 width:0;
 
+transition:.4s;
+
 background:
+
 linear-gradient(
 90deg,
-#73aaff,
-#76e7a4
+#7ab7ff,
+#79e5a9
 );
-
-transition:.35s;
 
 }
 
-.questionCard{
+.card{
 
-animation:fade .35s;
+animation:fade .4s;
 
 }
 
@@ -131,7 +164,8 @@ animation:fade .35s;
 
 from{
 opacity:0;
-transform:translateY(10px);
+transform:
+translateY(10px);
 }
 
 to{
@@ -149,17 +183,19 @@ font-weight:700;
 
 color:#6b7280;
 
-margin-bottom:15px;
+margin-bottom:16px;
 
 }
 
 .question{
 
-font-size:1.45rem;
+font-size:1.42rem;
 
-line-height:1.7;
+line-height:1.8;
 
-margin-bottom:28px;
+margin-bottom:30px;
+
+font-weight:600;
 
 }
 
@@ -173,31 +209,37 @@ border:none;
 
 border-radius:24px;
 
+background:#f4f8ff;
+
 margin-bottom:16px;
 
-background:#f5f8ff;
-
 cursor:pointer;
-
-transition:.25s;
 
 font-size:15px;
 
 text-align:left;
 
+transition:.25s;
+
 }
 
 .option:hover{
 
-background:#ddeeff;
+background:#dfeeff;
 
 transform:
 translateY(-4px);
 
+box-shadow:
+0 12px 24px
+rgba(79,124,255,.12);
+
 }
 
 #result{
+
 display:none;
+
 }
 
 .resultCard{
@@ -206,31 +248,34 @@ padding:42px;
 
 border-radius:32px;
 
-color:white;
-
 position:relative;
 
 overflow:hidden;
 
+color:white;
+
 }
 
-.bigEmoji{
+.bgEmoji{
 
 position:absolute;
 
-right:-10px;
+right:-30px;
 
-top:-20px;
+top:-40px;
 
 font-size:220px;
 
-opacity:.12;
+opacity:.08;
 
 }
 
 .emoji{
-font-size:78px;
-margin-bottom:15px;
+
+font-size:72px;
+
+margin-bottom:18px;
+
 }
 
 .code{
@@ -239,7 +284,7 @@ letter-spacing:5px;
 
 font-weight:700;
 
-margin-bottom:12px;
+opacity:.9;
 
 }
 
@@ -247,9 +292,7 @@ margin-bottom:12px;
 
 font-size:2.2rem;
 
-font-weight:700;
-
-margin-bottom:18px;
+margin-top:10px;
 
 }
 
@@ -257,97 +300,72 @@ margin-bottom:18px;
 
 line-height:2;
 
-font-size:15px;
+margin-top:22px;
 
 }
 
 .tags{
 
-display:flex;
+margin-top:24px;
 
-flex-wrap:wrap;
+display:flex;
 
 gap:10px;
 
-margin-top:25px;
+flex-wrap:wrap;
 
 }
 
 .tag{
 
-padding:10px 15px;
+padding:
+10px 16px;
 
 border-radius:999px;
-
-background:
-rgba(255,255,255,.2);
-
-}
-
-.analysis{
-
-margin-top:25px;
 
 background:
 rgba(255,255,255,.18);
 
-padding:20px;
-
-border-radius:20px;
-
 }
 
-.bar{
+.kakao{
 
-height:12px;
-
-background:
-rgba(255,255,255,.25);
-
-border-radius:999px;
-
-overflow:hidden;
-
-margin-top:8px;
-
-margin-bottom:15px;
-
-}
-
-.fill{
-
-height:100%;
-
-background:white;
-
-}
-
-.shareBox{
-
-margin-top:30px;
-
-background:white;
+margin-top:28px;
 
 padding:24px;
 
+background:white;
+
 border-radius:24px;
 
+color:black;
+
 box-shadow:
-0 8px 20px rgba(0,0,0,.06);
+0 8px 20px
+rgba(0,0,0,.05);
 
 }
 
-.preview{
+.profile{
 
-background:#f3f4f6;
+width:56px;
+height:56px;
 
-padding:18px;
+border-radius:50%;
 
-border-radius:18px;
+display:flex;
 
-margin-top:18px;
+align-items:center;
+justify-content:center;
 
-line-height:1.8;
+font-size:28px;
+
+background:
+linear-gradient(
+135deg,
+#8dc7ff,
+#9df0c0
+);
 
 }
 
@@ -357,7 +375,7 @@ display:flex;
 
 gap:12px;
 
-margin-top:25px;
+margin-top:28px;
 
 }
 
@@ -379,33 +397,30 @@ cursor:pointer;
 
 .restart{
 
-background:#4f7cff;
-
+background:#5678ff;
 color:white;
 
 }
 
 .share{
 
-background:#111827;
-
+background:#0f172a;
 color:white;
 
 }
 
 .footer{
 
-text-align:center;
-
 margin-top:30px;
 
-color:#6b7280;
+text-align:center;
 
-line-height:1.8;
+color:#9ca3af;
 
 }
 
 </style>
+
 </head>
 
 <body>
@@ -421,13 +436,19 @@ line-height:1.8;
 </h1>
 
 <div class="desc">
-당신의 소비 습관은 세상을 어떻게 바꾸고 있을까요?
+
+당신의 소비 습관은
+세상을 어떻게 바꾸고 있을까요?
+
 </div>
 
 <div class="progressWrap">
+
 <div
 class="progress"
-id="progress"></div>
+id="progress">
+</div>
+
 </div>
 
 <div id="quiz"></div>
@@ -439,80 +460,79 @@ class="resultCard"
 id="resultCard">
 
 <div
-class="bigEmoji"
-id="bg"></div>
+class="bgEmoji"
+id="bgEmoji">
+🌱
+</div>
 
 <div
 class="emoji"
-id="emoji"></div>
+id="emoji">
+🌱
+</div>
 
 <div
 class="code"
-id="code"></div>
+id="code">
+PLIA
+</div>
 
 <div
 class="title"
-id="title"></div>
+id="title">
+윤리적 분석가
+</div>
 
 <div
 class="resultDesc"
-id="rdesc"></div>
+id="rdesc">
+</div>
 
 <div
 class="tags"
-id="tags"></div>
+id="tags">
+</div>
 
-<div class="analysis">
+</div>
 
-축 분석
+<div class="kakao">
 
-<div>
-People / Environment
-<div class="bar">
+<div style="
+display:flex;
+gap:14px;
+align-items:center;
+">
+
 <div
-class="fill"
-id="pe"></div>
-</div>
-</div>
-
-<div>
-Logic / Feeling
-<div class="bar">
-<div
-class="fill"
-id="lf"></div>
-</div>
+class="profile"
+id="profile">
+🌱
 </div>
 
 <div>
-Insight / Social
-<div class="bar">
-<div
-class="fill"
-id="is"></div>
-</div>
-</div>
 
-<div>
-Action / Caution
-<div class="bar">
-<div
-class="fill"
-id="ac"></div>
-</div>
-</div>
+<b>
+공정무역 테스트
+</b>
+
+<br>
+
+친구와 공유하기
 
 </div>
 
 </div>
-
-<div class="shareBox">
-
-<b>친구와 공유하기</b>
 
 <div
-class="preview"
-id="preview"></div>
+style="
+margin-top:18px;
+background:#f3f4f6;
+padding:18px;
+border-radius:18px;
+"
+id="sharePreview">
+
+</div>
 
 </div>
 
@@ -520,7 +540,9 @@ id="preview"></div>
 
 <button
 class="btn restart"
-onclick="location.reload()">
+onclick="
+location.reload()
+">
 
 다시하기
 
@@ -528,7 +550,9 @@ onclick="location.reload()">
 
 <button
 class="btn share"
-onclick="shareResult()">
+onclick="
+shareResult()
+">
 
 공유하기
 
@@ -540,7 +564,8 @@ onclick="shareResult()">
 
 <div class="footer">
 
-📲 Instagram @FairTrade
+📲 Instagram Follow
+@FairTrade
 
 </div>
 
@@ -550,37 +575,117 @@ onclick="shareResult()">
 
 const questions=[
 
-["공정무역 커피와 유기농 커피 중 하나만 살 수 있다면?","P","E","공정무역 커피","유기농 커피"],
+[
+"Q1. 공정무역 커피와 유기농 커피 중 단 하나만 선택해야 한다면 어떤 기준으로 고르시겠습니까?",
+"P","E",
+"생산자에게 정당한 임금이 지급되는 공정무역 커피를 선택한다",
+"친환경 방식으로 재배된 유기농 커피를 선택한다"
+],
 
-["공정무역 브랜드를 고를 때 나는?","P","E","노동자 처우 확인","친환경 확인"],
+[
+"Q2. 공정무역 브랜드를 고를 때 가장 먼저 확인하는 것은 무엇입니까?",
+"P","E",
+"노동자 처우와 공정한 임금 구조",
+"친환경 포장재와 탄소배출량"
+],
 
-["공정무역이 필요한 이유?","P","E","노동 착취 방지","지속가능성"],
+[
+"Q3. 공정무역이 필요한 가장 큰 이유는 무엇이라고 생각합니까?",
+"P","E",
+"노동 착취와 불공정 구조 개선",
+"지속가능한 환경 보전"
+],
 
-["공감 메시지?","P","E","생산자의 정당한 값","지구를 위한 소비"],
+[
+"Q4. 공정무역 캠페인에서 가장 공감되는 메시지는 무엇입니까?",
+"P","E",
+"생산자의 땀에 정당한 값을 지불하세요",
+"지구를 생각하는 소비를 시작하세요"
+],
 
-["인증 마크를 보면?","L","F","인증 조사","좋은 일 같음"],
+[
+"Q5. 공정무역 인증 제품을 처음 봤을 때 당신은 어떻게 행동합니까?",
+"L","F",
+"인증 기준과 신뢰성을 조사한다",
+"좋은 일을 하는 소비처럼 느껴진다"
+],
 
-["친구 설명?","L","F","데이터 설명","농부 이야기"],
+[
+"Q6. 친구에게 공정무역을 설명한다면 어떻게 설명합니까?",
+"L","F",
+"공급망·가격 구조·데이터 중심",
+"생산자의 삶과 이야기 중심"
+],
 
-["콘텐츠 선호?","L","F","통계 그래프","인터뷰"],
+[
+"Q7. 공정무역 콘텐츠에서 더 관심 가는 것은 무엇입니까?",
+"L","F",
+"통계 그래프",
+"인터뷰 영상"
+],
 
-["효과 의심?","L","F","보고서 확인","사례 확인"],
+[
+"Q8. 공정무역 효과가 의심될 때 어떻게 확인합니까?",
+"L","F",
+"논문·보고서 검증",
+"실제 사례 확인"
+],
 
-["제품 없으면?","I","S","혼자 탐색","건의"],
+[
+"Q9. 학교 앞 편의점에 공정무역 제품이 없다면?",
+"I","S",
+"혼자 구매처를 찾는다",
+"학교에 건의한다"
+],
 
-["캠페인 요청?","I","S","검토 후","바로 참여"],
+[
+"Q10. 공정무역 캠페인 참여 요청을 받는다면?",
+"I","S",
+"효과를 검토 후 결정",
+"바로 참여"
+],
 
-["카페 원두 문제?","I","S","조용히 이동","도입 제안"],
+[
+"Q11. 좋아하는 카페가 공정무역 원두를 사용하지 않는다면?",
+"I","S",
+"조용히 다른 카페 이용",
+"도입 건의"
+],
 
-["학교 인증?","I","S","기준 조사","서명 운동"],
+[
+"Q12. 학교 공정무역 인증 추진 시?",
+"I","S",
+"기준 조사",
+"서명 운동"
+],
 
-["초콜릿 비싸면?","A","C","구매","고민"],
+[
+"Q13. 공정무역 초콜릿이 2000원 비싸다면?",
+"A","C",
+"가치 소비",
+"가격 고민"
+],
 
-["브랜드 논란?","A","C","바로 변경","확인"],
+[
+"Q14. 브랜드가 불공정무역 논란이면?",
+"A","C",
+"즉시 변경",
+"확인 후 결정"
+],
 
-["음료 발견?","A","C","바로 구매","가격"],
+[
+"Q15. 편의점 공정무역 음료를 보면?",
+"A","C",
+"바로 구매",
+"가격 보고 판단"
+],
 
-["친구 조언?","A","C","일단 시작","조사 후"]
+[
+"Q16. 친구에게 공정무역 소비를 추천한다면?",
+"A","C",
+"일단 시작",
+"조사 후 시작"
+]
 
 ];
 
@@ -623,22 +728,28 @@ progress.style.width=
 (idx/16*100)+"%";
 
 if(idx>=16){
+
 showResult();
 return;
+
 }
 
 let q=questions[idx];
 
 quiz.innerHTML=`
 
-<div class="questionCard">
+<div class="card">
 
 <div class="number">
+
 QUESTION ${idx+1}/16
+
 </div>
 
 <div class="question">
+
 ${q[0]}
+
 </div>
 
 <button
@@ -658,13 +769,14 @@ ${q[4]}
 </button>
 
 </div>
+
 `;
 
 }
 
-function pick(v){
+function pick(t){
 
-score[v]++;
+score[t]++;
 
 idx++;
 
@@ -678,7 +790,7 @@ quiz.style.display="none";
 
 result.style.display="block";
 
-let code=
+const code=
 
 (score.P>=score.E?"P":"E")+
 
@@ -688,43 +800,68 @@ let code=
 
 (score.A>=score.C?"A":"C");
 
-let r=resultMap[code];
+const r=resultMap[code];
 
-emoji.textContent=r[0];
-bg.textContent=r[0];
+emoji.innerText=r[0];
+bgEmoji.innerText=r[0];
+profile.innerText=r[0];
 
-document.getElementById("code").textContent=code;
+window.finalCode=code;
 
-title.textContent=r[1];
+document.getElementById(
+"code"
+).innerText=code;
+
+title.innerText=r[1];
 
 rdesc.innerHTML=
-`
-당신은 ${r[1]} 유형입니다.
 
-공정무역 가치 소비를 통해
-사회와 환경 변화를 추구합니다.
+`
+당신은
+<b>${r[1]}</b>
+유형입니다.
+
+공정무역 소비를 통해
+사회와 환경의 변화를
+만드는 시민입니다.
+
+📲 인스타 공유해보세요!
 `;
 
 tags.innerHTML=
+
 `
-<div class="tag">#공정무역</div>
-<div class="tag">#${code}</div>
-<div class="tag">#가치소비</div>
+<span class="tag">
+#공정무역
+</span>
+
+<span class="tag">
+#${code}
+</span>
+
+<span class="tag">
+#가치소비
+</span>
 `;
 
-pe.style.width=(score.P/4*100)+"%";
-lf.style.width=(score.L/4*100)+"%";
-is.style.width=(score.I/4*100)+"%";
-ac.style.width=(score.A/4*100)+"%";
+sharePreview.innerHTML=
 
-preview.innerHTML=
-`${r[0]} ${r[1]}<br>
-유형 : ${code}`;
+`
+${r[0]} ${r[1]}
+
+<br><br>
+
+유형 :
+${code}
+
+<br><br>
+
+공정무역 소비 테스트 결과
+`;
 
 resultCard.style.background=
-"linear-gradient(135deg,#5f8eff,#73dfaa)";
 
-window.finalCode=code;
+"linear-gradient(135deg,#6ea8ff,#79e3aa)";
 
 }
 
@@ -732,9 +869,15 @@ function shareResult(){
 
 navigator.clipboard.writeText(
 
-`${title.textContent}
+`🌍 공정무역 소비 유형 테스트
 
-(${finalCode})`
+내 결과 :
+
+${title.innerText}
+
+(${finalCode})
+
+너도 해보기!`
 
 );
 
